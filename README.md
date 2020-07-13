@@ -1,6 +1,6 @@
 # Postfix: TCP Table Service
 
-As i could not find good information for the expected results, here are the results of my research:
+As i was not able to find a detailed description of the expected results, here are the results of my research:
 
 Manual:
 http://www.postfix.org/tcp_table.5.html
@@ -12,8 +12,8 @@ http://www.postfix.org/tcp_table.5.html
 - Subject: All non-ascii characters including spaces are encoded (in PHP use rawurldecode to decode)
 - Postfix will may reuse an existing client connection
 - Postfix will may open multiple client connections
-- If there are multiple scopes, postfix will request each of them until a match is found. 
-- If there are multiple scopes, it is possible, that postfix will request only the exact address address without requesting the other scopes.
+- If there are multiple scopes, postfix will request each of them until there is a match.
+- If there are multiple scopes, postfix will request sometimes only the exact address without requesting the other scopes.
 
 ##  How to Test using "postmap"
 postmap -q "subject" tcp:[IP]:[Port]]
